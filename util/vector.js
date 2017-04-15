@@ -23,6 +23,10 @@ class Vector {
         this.x /= val
         this.y /= val
     }
+    
+    length() {
+        return Math.sqrt((this.x * this.x) + (this.y * this.y))
+    }
     //static functions. Called with function prototype
     static add(vec1, vec2) {
         return new Vector(vec1.x += vec2.x,vec1.y += vec2.y)
@@ -35,6 +39,10 @@ class Vector {
     }
     static div(vec1, val) {
         return new Vector(vec1.x / val, vec1.y / val)
+    }
+    
+    static length(vec) {
+        return Math.sqrt((vec.x * vec.x) + (vec.y * vec.y))
     }
     
 }
