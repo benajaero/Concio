@@ -44,6 +44,11 @@ class Vector {
         this.x = val * Math.cos(angle)
         this.y = val * Math.sin(angle)
     }
+    normalize() {
+        let div = this.length() / this.length()
+        this.x /= div
+        this.y /= div
+    }
     //static functions. Called with function prototype
     static add(vec1, vec2) {
         return new Vector(vec1.x += vec2.x,vec1.y += vec2.y)
